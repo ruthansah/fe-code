@@ -1,4 +1,6 @@
 $(document).ready(function () {
+
+  $("#page-load").hide();
   /**
    * Gets an object and sets its content into the result card in the result page
    * If there's no content in the JSON object, makes sure to tell the user
@@ -8,12 +10,20 @@ $(document).ready(function () {
       var user_object = localStorage.getItem('userObject');
       var testVar;
       retreivedObject = JSON.parse(user_object); //parses the retrieved object into an JSON object
+
+      showLoadingPage();
+
       if (JSON.stringify(retreivedObject) == "[]") {
+
+        $("#page-load").hide();
+
         $('#result-count').text("0 Results");
         $(".result-desc").text(
           "Try starting a new search below"
         );
       } else {
+        $("#page-load").hide();
+
         $('#result-count').text("1 Result");
         $("#result-subtext").html("Look at the result below to see the details of the person you’re searched for.");
         $(".name").append(
@@ -43,3 +53,8 @@ $(document).ready(function () {
     }
   }
 });
+
+function showLoadingPage(){
+  $(".result-wrap").hide();
+  $("#page-load").show();
+}

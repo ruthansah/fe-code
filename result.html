@@ -17,7 +17,7 @@
         </a>
         <div>
           <img src="img/icn_search.svg" width="23" height="23" alt="Search">
-          <img class="ml-4" src="img/icn_person.svg" alt="Profile">
+          <img class="ml-4" src="img/icn_person.svg" alt="Profile" width="20" height="23">
         </div>
       </div>
     </nav>
@@ -27,6 +27,12 @@
           <h1 id="result-count" class="text-primary mb-3"></h1>
           <h2 id="result-subtext" class="result-desc"></h2>
         </div>
+        
+        <div  id="page-load" class="spinner">
+          <img class="spinner" src="img/loading_spinner.svg" alt="Spinner" width="154" height="154" >
+          <div class="spinner-msg">Please wait a moment...</div>
+        </div> 
+
         <div class="result-wrap">
           <div class="result-card d-flex">
             <div class="result-avatar">
@@ -76,7 +82,9 @@
         </form>
       </div>
     </section>
-    
+
+
+
     <footer class="footer">
       <div class="container">
         <div class="row align-items-center">

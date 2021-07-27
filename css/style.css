@@ -8,6 +8,7 @@
 --| [SECTION] Features
 --| [SECTION][RESULTS PAGE] Result
 --| [SECTION][RESULTS PAGE] Search Again
+--| [SECTION][SPINNER PAGE]
 --| Footer
 --------------------------------------------------------
 ----------------------------------------------------- */
@@ -22,6 +23,7 @@ body {
   font-family: 'Lato', sans-serif;
   color: #000;
   font-size: 18px;
+  background-color: #F8F8F8;
 }
 
 h1 {
@@ -116,6 +118,18 @@ section {
   margin-left: 20px;
 }
 
+.btn-form-submit:hover {
+  background: #F2DA56;
+  box-shadow: 0 3px 0 0 #A6953B, inset 0 1px 0 0 #FFFFFF;
+  border-radius: 6px;
+}
+
+.btn-form-submit:active {
+  background: #F6BC25;
+  box-shadow: 0 3px 0 0 #A6953B, inset 0 1px 0 0 #FFFFFF;
+  border-radius: 6px;
+}
+
 .input-group > .form-control {
   height: 70px;
   background: #FFF;
@@ -173,6 +187,18 @@ section {
   }
   .btn-form-submit {
     margin: 12px 0 0 0;
+  }
+
+  .input-group.error .error-msg {
+    display: block;
+    position: unset;
+    bottom: -30px;
+    margin: 0px;
+    padding: 4px 12px;
+    background: #DC0015;
+    color: #FFF;
+    border-radius: 0 0 3px 3px;
+    font-size: 16px;
   }
 }
 
@@ -272,6 +298,12 @@ section {
   }
 }
 
+@media (max-width: 576px) {
+  .list-item{
+    margin-right:9px;
+    margin-left: 9px;
+  }
+}
 /* ************************************************************
 ***************************************************************
 --- [SECTION][RESULTS PAGE] Result ---
@@ -362,6 +394,31 @@ section {
 
 /* ************************************************************
 ***************************************************************
+--- [SECTION][SPINNER PAGE]---
+***************************************************************
+************************************************************ */
+
+.spinner {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 343px;
+  margin-bottom: 27px;
+  width: 50%;
+}
+
+.spinner-msg {
+  font-family: 'Lato', sans-serif;
+  font-size: 24px;
+  color: #004A80;
+  letter-spacing: 0;
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 343px;
+}
+
+/* ************************************************************
+***************************************************************
 --- Footer ---
 ***************************************************************
 ************************************************************ */
@@ -386,3 +443,4 @@ section {
   content: '|';
   padding-left: 5px;
 }
+
