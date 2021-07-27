@@ -29,8 +29,16 @@
         </div>
         
         <form>
+          <div class="input-group search-wrapper ">
+            <div class="search-type" class='btn'>TYPE OF SEARCH</div>
+            <div class="row">
+              <div class="active-search col-xs-6 left-search-btn" id="email-search">EMAIL ADDRESS</div>
+              <div class="nonactive-search  col-xs-6" id="phone-search">PHONE NUMBER</div>
+            </div>
+          </div>
+          
           <div class="input-group">
-            <input class="form-control" type="text" name="email" placeholder="Enter an Email Address" />
+            <input class="form-control placeholder" type="text" name="email" placeholder="Enter an Email Address" />
             <p class="error-msg">Please enter a valid email address</p>
             <button id="btn-search" class="btn btn-form-submit text-uppercase" type="submit">Go!</button>
           </div>
